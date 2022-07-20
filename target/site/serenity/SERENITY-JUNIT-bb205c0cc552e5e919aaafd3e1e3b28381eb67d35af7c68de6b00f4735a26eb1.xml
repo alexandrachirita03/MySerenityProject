@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="org.fasttrackit.features.search.SearchByKeywordStory" skipped="0" tests="1" time="14.38" timestamp="2022-06-09 08:02:59"><testcase classname="org.fasttrackit.features.search.SearchByKeywordStory" name="Searching by keyword apple should display the corresponding article"/></testsuite>
