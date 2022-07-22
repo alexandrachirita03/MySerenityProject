@@ -26,6 +26,8 @@ public class BaseTest {
     protected CartSteps cartSteps;
     @Steps
     protected RegisterSteps registerSteps;
+    @Steps
+    protected CheckoutSteps checkoutSteps;
 
     @Before
     public void maximize(){

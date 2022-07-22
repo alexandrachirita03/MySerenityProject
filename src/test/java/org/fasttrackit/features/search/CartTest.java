@@ -10,6 +10,7 @@ public class CartTest extends BaseTest{
         searchSteps.doSearch("beanie");
         productsSteps.selectProductFromList("Beanie");
         cartSteps.clickAddToCart();
+        cartSteps.verifySuccessMessage(" Beanie ");
     }
 
 }

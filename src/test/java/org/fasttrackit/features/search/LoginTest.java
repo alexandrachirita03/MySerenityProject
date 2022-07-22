@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
     public void loginWithValidCredentialsTest(){
        loginSteps.navigateToHomePage();
        loginSteps.navigateToLogin();
-       loginSteps.setCredetials("alexandra_rusitoru@yahoo.com", "Qwerty1$2$3$");
+       loginSteps.setCredentials("alexandra_rusitoru@yahoo.com", "Qwerty1$2$3$");
        loginSteps.clickLogin();
        loginSteps.verifyUsernameMessage("alexandra_rusitoru");
     }

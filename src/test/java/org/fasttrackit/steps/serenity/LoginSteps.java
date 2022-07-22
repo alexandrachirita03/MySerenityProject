@@ -24,7 +24,7 @@ public class LoginSteps extends ScenarioSteps {
     }
 
     @Step
-    public void setCredetials(String email, String pass){
+    public void setCredentials(String email, String pass){
         loginPage.setEmailField(email);
         loginPage.setPasswordField(pass);
     }
@@ -44,7 +44,7 @@ public class LoginSteps extends ScenarioSteps {
     public void doLogin(String email, String password){
         navigateToHomePage();
         navigateToLogin();
-        setCredetials(email, password);
+        setCredentials(email, password);
         clickLogin();
     }
 }
