@@ -20,4 +20,21 @@ public class CartSteps extends ScenarioSteps {
         cartPage.verifySuccessMessage(productName);
 
     }
+
+    @Step
+    public void clickOnViewCart(){
+        cartPage.clickOnViewCart();
+    }
+
+
+    @Step
+    public void clickRemoveButton(){
+        cartPage.removeProductFromCart();
+    }
+
+   // @Step
+   // public void verifySuccessMessage2(String productName){
+    //    cartPage.verifySuccessMessage2(productName);
+
+   // }
 }
