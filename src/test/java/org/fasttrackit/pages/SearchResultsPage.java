@@ -8,14 +8,15 @@ import java.util.List;
 
 public class SearchResultsPage extends PageObject {
 
-    @FindBy(css = ".products  li.product")
+    @FindBy(css = ".type-product h2")
     private List<WebElementFacade> productsList;
 
 
     public boolean checkListForProduct(String productName) {
+        waitFor(productsList.get(0));
 
         for (WebElementFacade element : productsList) {
-            if (element.findElement(By.cssSelector(".post-48 .woocommerce-loop-product__title")).getText().equalsIgnoreCase(productName)) {
+            if (element.getText().equalsIgnoreCase(productName)) {
                 return true;
             }
         }
@@ -25,8 +26,8 @@ public class SearchResultsPage extends PageObject {
     public void selectProductFromList(String product) {
 
         for (WebElementFacade element : productsList) {
-            if (element.findElement(By.cssSelector(".post-85 .woocommerce-loop-product__title")).getText().equalsIgnoreCase(product)) {
-                element.findElement(By.cssSelector(".post-48 .woocommerce-loop-product__title")).click();
+            if (element.getText().equalsIgnoreCase(product)) {
+                clickOn(element);
                 break;
             }
         }
