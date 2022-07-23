@@ -24,6 +24,8 @@ public class CheckoutPage extends PageObject {
     private WebElementFacade emailAddress;
     @FindBy(css = ".place-order .alt")
     private WebElementFacade placeOrderButton;
+    @FindBy (css = ".woocommerce-error ")
+    private WebElementFacade errorMessage;
 
 
     public void setFirstName(String name1){

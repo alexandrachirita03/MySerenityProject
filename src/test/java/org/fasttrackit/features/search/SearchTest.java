@@ -16,6 +16,13 @@ public class SearchTest extends BaseTest{
         searchSteps.verifyProductInResults("Beanie");
     }
 
+    @Test
+    public void doSearchFromSortByDropdownTest(){
+        searchSteps.navigateToHomePage();
+        searchSteps.clickOnSearchIcon();
+        searchSteps.sortBy();
+    }
+
 
 
 }

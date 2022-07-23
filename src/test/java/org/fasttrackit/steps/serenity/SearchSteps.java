@@ -22,4 +22,21 @@ public class SearchSteps extends ScenarioSteps {
     public void verifyProductInResults(String productName){
         Assert.assertTrue(searchResultsPage.checkListForProduct(productName));
     }
+
+    @Step
+    public void navigateToHomePage(){
+        homePage.open();
+    }
+
+    @Step
+    public void clickOnSearchIcon(){
+        homePage.clickSearchIcon1();
+        homePage.clickSearchIcon();
+    }
+
+
+    @Step
+    public void sortBy(){
+        searchResultsPage.sortBy();
+    }
 }

@@ -2,6 +2,7 @@ package org.fasttrackit.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
+import org.fasttrackit.pages.AccountPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.RegisterPage;
 
@@ -9,6 +10,7 @@ public class RegisterSteps extends ScenarioSteps {
 
     private HomePage homePage;
     private RegisterPage registerPage;
+    private AccountPage accountPage;
 
 
 
@@ -33,6 +35,11 @@ public class RegisterSteps extends ScenarioSteps {
     @Step
     public void clickRegister(){
         registerPage.clickRegisterButton();
+    }
+
+    @Step
+    public void verifyErrorMessage(String text){
+        accountPage.verifyErrorMessage(text);
     }
 
 

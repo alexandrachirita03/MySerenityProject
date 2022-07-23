@@ -23,6 +23,7 @@ public class HomePage extends PageObject {
     @FindBy(css = "#menu-item-125")
     private WebElementFacade checkoutLink;
 
+
     public void clickAccountLink(){
         clickOn(accountLink);
     }
@@ -46,10 +47,11 @@ public class HomePage extends PageObject {
     public void clickRegisterLink(){
         clickOn(registerLink);
     }
-
     public void clickCheckoutLink(){
         clickOn(checkoutLink);
     }
+
+
 
 
 }

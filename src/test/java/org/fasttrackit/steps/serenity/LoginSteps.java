@@ -41,6 +41,11 @@ public class LoginSteps extends ScenarioSteps {
     }
 
     @Step
+    public void verifyErrorMessage(String text){
+        accountPage.verifyErrorMessage(text);
+    }
+
+    @Step
     public void doLogin(String email, String password){
         navigateToHomePage();
         navigateToLogin();

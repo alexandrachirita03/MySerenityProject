@@ -97,5 +97,11 @@ public class CheckoutSteps extends ScenarioSteps {
         Assert.assertEquals("Thank you. Your order has been received.", text);
     }
 
+    @Step
+    public void verifyErrorMessage(String text){
+        Assert.assertEquals("Billing Phone is a required field." +
+                "Billing Email address is not a valid email address.", text);
+    }
+
 
 }

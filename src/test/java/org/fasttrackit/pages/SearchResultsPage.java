@@ -10,6 +10,8 @@ public class SearchResultsPage extends PageObject {
 
     @FindBy(css = ".type-product h2")
     private List<WebElementFacade> productsList;
+    @FindBy( css = ".woocommerce-ordering .orderby")
+    private WebElementFacade sortByDropdown;
 
 
     public boolean checkListForProduct(String productName) {
@@ -31,6 +33,14 @@ public class SearchResultsPage extends PageObject {
                 break;
             }
         }
+    }
+
+
+
+    public void sortBy(){
+        selectFromDropdown(sortByDropdown, "Sort by newness");
+        withAction().moveToElement(sortByDropdown).build();
+
     }
 
 
