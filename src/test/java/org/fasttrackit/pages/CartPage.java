@@ -1,8 +1,13 @@
 package org.fasttrackit.pages;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class CartPage extends PageObject {
 
@@ -14,15 +19,15 @@ public class CartPage extends PageObject {
     private WebElementFacade removeButton;
     @FindBy(css = ".entry-content .woocommerce-message ")
     private WebElementFacade successMessage2;
-    @FindBy(css = "#quantity_62dc2df02fbe2")
+    @FindBy(css = ".qty")
     private WebElementFacade quantityField;
+
+    @FindBy(css = "#quantity_62dda2d9e2987")
+    private WebElementFacade quantityInputField;
+
+
     @FindBy( css = "#post-118 > div > div > form > table > tbody > tr:nth-child(2) > td > button")
     private WebElementFacade updateCart;
-
-
-   //public void verifySuccessMessage(String productName){
-    //   successMessage.shouldContainOnlyText( productName  +  "has been added to your cart.");
-   // }
 
 
 
@@ -36,15 +41,17 @@ public class CartPage extends PageObject {
     }
 
     public void verifySuccessMessage2(String productName){
-       successMessage2.shouldContainOnlyText( productName  +  " removed. Undo? ");
+        successMessage2.getText().equals ("�" + productName + "� removed. Undo?");
     }
 
     public void setQuantityField(String number){
-        typeInto(quantityField, number);
+        typeInto(quantityField,number);
     }
 
     public void clickOnUpdateCart(){
         clickOn(updateCart);
     }
+
+
 
 }

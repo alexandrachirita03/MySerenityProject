@@ -12,6 +12,7 @@ public class LoginSteps extends ScenarioSteps {
     private LoginPage loginPage;
     private AccountPage accountPage;
 
+
     @Step
     public void navigateToHomePage(){
         homePage.open();
@@ -52,4 +53,7 @@ public class LoginSteps extends ScenarioSteps {
         setCredentials(email, password);
         clickLogin();
     }
+
+
+
 }

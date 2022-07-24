@@ -26,15 +26,14 @@ public class CartTest extends BaseTest{
 
     @Test
     public void changeQuantityOfProductFromCart(){
-        loginSteps.doLogin("alexandra_rusitoru@yahoo.com", "Qwerty1$2$3$");
+        cartSteps.navigateToHomePage();
         searchSteps.doSearch("beanie");
         productsSteps.selectProductFromList("Beanie");
         cartSteps.clickAddToCart();
         cartSteps.clickOnViewCart();
-        //cartSteps.navigateToHomePage();
-       // cartSteps.clickOnShoppingCartIcon();
         cartSteps.changeQuantity("5");
         cartSteps.clickOnUpdateCart();
+        cartSteps.verifySuccessMessage1("Cart updated.");
     }
 
 

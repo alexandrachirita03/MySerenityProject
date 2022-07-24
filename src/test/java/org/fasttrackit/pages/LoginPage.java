@@ -13,6 +13,8 @@ public class LoginPage extends PageObject {
     @FindBy (css = "button[name='login']")
     private WebElementFacade loginButton;
 
+
+
     public void setEmailField(String email){
         typeInto(emailField, email);
     }
@@ -24,4 +26,8 @@ public class LoginPage extends PageObject {
     public void clickLoginButton(){
         clickOn(loginButton);
     }
+
+
+
+
 }

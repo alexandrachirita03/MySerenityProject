@@ -3,6 +3,7 @@ package org.fasttrackit.steps.serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.CartPage;
+import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.ProductPage;
 import org.junit.Assert;
 
@@ -10,6 +11,7 @@ public class CartSteps extends ScenarioSteps {
 
     private ProductPage productPage;
     private CartPage cartPage;
+    private HomePage homePage;
 
 
     @Step
@@ -22,11 +24,11 @@ public class CartSteps extends ScenarioSteps {
         Assert.assertEquals("VIEW CART", text);
     }
 
-    //@Step
-   // public void verifySuccessMessage(String productName){
-    //    cartPage.verifySuccessMessage(productName);
 
-   // }
+   @Step
+   public void navigateToHomePage(){
+       homePage.open();
+   }
 
     @Step
     public void clickOnViewCart(){
@@ -56,4 +58,8 @@ public class CartSteps extends ScenarioSteps {
         cartPage.clickOnUpdateCart();
     }
 
+   @Step
+   public void verifySuccessMessage1(String text){
+       Assert.assertEquals("Cart updated.", text);
+   }
 }
