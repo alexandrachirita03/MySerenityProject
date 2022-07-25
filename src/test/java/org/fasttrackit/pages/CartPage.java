@@ -26,7 +26,7 @@ public class CartPage extends PageObject {
     private WebElementFacade quantityInputField;
 
 
-    @FindBy( css = "#post-118 > div > div > form > table > tbody > tr:nth-child(2) > td > button")
+    @FindBy( css =".button:nth-child(2)")
     private WebElementFacade updateCart;
 
 
