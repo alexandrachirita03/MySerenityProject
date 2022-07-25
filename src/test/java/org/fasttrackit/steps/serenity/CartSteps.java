@@ -62,4 +62,20 @@ public class CartSteps extends ScenarioSteps {
    public void verifySuccessMessage1(String text){
        Assert.assertEquals("Cart updated.", text);
    }
+
+   @Step
+    public void setCouponNumber(String number){
+        cartPage.setCouponNumberField(number);
+   }
+
+   @Step
+    public void clickOnApplyCouponButton(){
+        cartPage.clickOnApplyCouponButton();
+   }
+
+   @Step
+    public  void verifyErrorMessage(String number){
+        cartPage.verifyErrorMessage(number);
+
+   }
 }

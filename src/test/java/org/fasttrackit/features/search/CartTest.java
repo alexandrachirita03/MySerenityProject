@@ -36,5 +36,17 @@ public class CartTest extends BaseTest{
         cartSteps.verifySuccessMessage1("Cart updated.");
     }
 
+    @Test
+    public void applyAnInvalidCoupon(){
+        cartSteps.navigateToHomePage();
+        searchSteps.doSearch("beanie");
+        productsSteps.selectProductFromList("Beanie");
+        cartSteps.clickAddToCart();
+        cartSteps.clickOnViewCart();
+        cartSteps.setCouponNumber("4512");
+        cartSteps.clickOnApplyCouponButton();
+        cartSteps.verifyErrorMessage("4512");
+    }
+
 
 }

@@ -29,6 +29,13 @@ public class CartPage extends PageObject {
     @FindBy( css =".button:nth-child(2)")
     private WebElementFacade updateCart;
 
+    @FindBy(css = "#coupon_code")
+    private WebElementFacade couponField;
+    @FindBy(css = ".coupon .button")
+    private WebElementFacade applyCouponButton;
+    @FindBy(css = ".woocommerce-error")
+    private WebElementFacade errorMessage;
+
 
 
     public void clickOnViewCart(){
@@ -52,6 +59,16 @@ public class CartPage extends PageObject {
         clickOn(updateCart);
     }
 
+    public void setCouponNumberField(String number){
+        typeInto(couponField, number);
+    }
+
+    public void clickOnApplyCouponButton(){
+        clickOn(applyCouponButton);
+    }
+    public void verifyErrorMessage(String number){
+        errorMessage.getText().equals("Coupon" + number + "does not exist!");
+    }
 
 
 }
