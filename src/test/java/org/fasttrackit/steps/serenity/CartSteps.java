@@ -78,4 +78,6 @@ public class CartSteps extends ScenarioSteps {
         cartPage.verifyErrorMessage(number);
 
    }
+
+
 }

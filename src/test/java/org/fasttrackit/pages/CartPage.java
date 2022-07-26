@@ -66,9 +66,12 @@ public class CartPage extends PageObject {
     public void clickOnApplyCouponButton(){
         clickOn(applyCouponButton);
     }
+
     public void verifyErrorMessage(String number){
         errorMessage.getText().equals("Coupon" + number + "does not exist!");
     }
+
+
 
 
 }
